@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#242321">
+  <meta name="description" content="A quiet little corner of the internet — links for lzvrt / мораль.">
+  <title>323 enjoyer | lzvrt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261015-14">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__glow ambient__glow--one"></div>
+    <div class="ambient__glow ambient__glow--two"></div>
+    <div class="ambient__grain"></div>
+    <canvas class="ambient__stars" id="stars" aria-hidden="true"></canvas>
+  </div>
+  <canvas class="cursor-sparkles" id="cursor-sparkles" aria-hidden="true"></canvas>
+  <canvas class="audio-visualizer" id="audio-visualizer" aria-hidden="true"></canvas>
+
+  <main>
+    <section class="intro" id="intro" aria-label="Welcome">
+      <button class="intro__enter" id="enter" type="button">
+        <span class="intro__mark" aria-hidden="true">✳</span>
+        <span>click anywhere to continue</span>
+      </button>
+    </section>
+
+    <div class="site" id="site" aria-hidden="true">
+      <section class="page page--home" id="home" aria-label="Profile">
+        <div class="home-card">
+          <h1><span class="nickname nickname--accent">lzvrt</span><b>/</b><span class="nickname nickname--light">мораль</span></h1>
+          <div class="profile-meta">
+            <span>18 y.o</span><span class="meta-dot"></span>
+            <span class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></svg>Krasnodar</span>
+          </div>
+          <button class="scroll-cue" type="button" data-go="links" aria-label="Scroll to social links">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="page page--links" id="links" aria-label="Social links">
+        <div class="links-content">
+          <div class="social-links">
+            <a class="social-link" href="https://steamcommunity.com/id/lzvrt/" target="_blank" rel="noopener noreferrer" aria-label="Open Steam profile" title="Steam">
+              <svg class="rose-frame rose-frame--steam" viewBox="0 0 160 160" aria-hidden="true">
+                <path class="rose-frame__stem" d="M80 20C112 19 139 43 140 77c1 32-22 61-53 63-30 3-58-15-66-44-9-30 4-57 29-69 9-4 19-7 30-7Z"/>
+                <path class="rose-frame__leaf" d="M35 53C19 45 25 31 40 35c8 4 5 13-5 18Zm89-6c16-8 9-22-5-17-7 5-4 13 5 17Zm-9 62c15 9 24-4 12-13-8-2-13 5-12 13Z"/>
+                <path class="rose-frame__vein" d="m35 53-8-10m97 4 8-10m-52 67 10 8"/>
+                <g class="rose-frame__bud rose-frame__bud--one" transform="translate(80 20)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g>
+                <g class="rose-frame__bud rose-frame__bud--two" transform="translate(140 77)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g>
+                <g class="rose-frame__bud rose-frame__bud--three" transform="translate(55 125)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g>
+              </svg>
+              <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+            </a>
+            <a class="social-link" href="https://t.me/d323s" target="_blank" rel="noopener noreferrer" aria-label="Open Telegram profile" title="Telegram">
+              <svg class="rose-frame rose-frame--telegram" viewBox="0 0 160 160" aria-hidden="true"><path class="rose-frame__stem" d="M75 18C108 17 134 39 138 72c4 32-14 65-48 70-34 5-63-17-69-49-7-34 18-68 54-75Z"/><path class="rose-frame__leaf" d="M29 78c-17-5-14-20 1-18 8 3 8 11-1 18Zm95-44c15-9 23 4 10 13-8 3-13-4-10-13Zm-4 87c16 6 23-8 9-15-9-1-13 6-9 15Z"/><path class="rose-frame__vein" d="m29 78-10-9m105-35 9-8m-13 95 10 7"/><g class="rose-frame__bud rose-frame__bud--one" transform="translate(69 19)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g><g class="rose-frame__bud rose-frame__bud--two" transform="translate(138 72)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g><g class="rose-frame__bud rose-frame__bud--three" transform="translate(96 137)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g></svg>
+              <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 4.1-3.2 15.1c-.24 1.07-.87 1.33-1.76.83l-4.88-3.6-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.97 9.04-8.17c.4-.35-.09-.55-.62-.2L5.83 12.95.99 11.43c-1.05-.33-1.07-1.05.22-1.56L20.1 2.5c.88-.32 1.65.21 1.3 1.6Z"/></svg>
+            </a>
+            <a class="social-link" href="https://discordapp.com/users/896078593342451752/" target="_blank" rel="noopener noreferrer" aria-label="Open Discord profile" title="Discord">
+              <svg class="rose-frame rose-frame--discord" viewBox="0 0 160 160" aria-hidden="true"><path class="rose-frame__stem" d="M84 20c31-5 56 18 56 51 1 29-12 59-42 68-31 10-66-9-76-38-12-32 10-71 40-78 8-2 15-3 22-3Z"/><path class="rose-frame__leaf" d="M33 98c-16 2-18-13-3-15 8 1 10 6 3 15Zm96-56c14-10 23 2 12 12-8 4-13-2-12-12Zm-37 83c10 14 24 6 18-8-6-6-13-3-18 8Z"/><path class="rose-frame__vein" d="m33 98-10-7m106-49 9-8m-46 91 9 9"/><g class="rose-frame__bud rose-frame__bud--one" transform="translate(91 20)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g><g class="rose-frame__bud rose-frame__bud--two" transform="translate(140 78)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g><g class="rose-frame__bud rose-frame__bud--three" transform="translate(67 136)"><path d="M0 5C-8 2-7-5-3-8c1-4 7-4 9 0 5 4 3 11-3 13L0 5Z"/><path class="rose-frame__calyx" d="m-4 2-4-1m5 2-2 4m7-4 3 3m-2-5 4-2"/></g></svg>
+              <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.1A18.4 18.4 0 0 0 15.2 3l-.6 1.2a16.8 16.8 0 0 0-5.2 0L8.8 3a18.4 18.4 0 0 0-4.5 2.1C1.5 9.3.7 13.4 1.1 17.5a18.3 18.3 0 0 0 5.5 2.8l1.2-2a11.7 11.7 0 0 1-1.9-.9l.5-.4a13.1 13.1 0 0 0 11.2 0l.5.4a11.7 11.7 0 0 1-1.9.9l1.2 2a18.3 18.3 0 0 0 5.5-2.8c.5-4.7-.8-8.8-3.2-12.4ZM8.5 14.9c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Zm7 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <aside class="music-player" id="player" aria-label="Music player">
+    <svg class="player__vine-frame" viewBox="0 0 100 360" preserveAspectRatio="none" aria-hidden="true">
+      <path class="player__vine-stem" d="M23 9C12 13 13 34 19 48c6 15-10 27-4 45s-7 36 0 54  -8 35-1 54-5 37 2 55-6 37 1 55-2 37 11 43c13 7 26-5 38 0 12 5 26-4 21-19-5-17 7-32 0-49-7-18 8-35 0-53-8-18 8-35 0-53-8-18 9-35 0-53-9-18 7-37-2-55-9-15-26-3-40-8-8-3-15-3-21-1Z"/>
+      <path class="player__vine-leaf" d="M16 99C3 102 4 88 15 85c8 3 7 9 1 14Zm70 78c13-4 16 10 3 14-7-3-8-8-3-14ZM16 274c-12 5-15-9-4-14 8 2 9 8 4 14Z"/>
+      <path class="player__vine-vein" d="m16 99-8-9m70 87 9-9m-71 106-8-8"/>
+      <g class="player__vine-bud" transform="translate(23 9)"><path d="M0 4C-6 1-6-5-2-7c1-3 6-3 8 0 4 4 2 10-3 12Z"/></g>
+      <g class="player__vine-bud player__vine-bud--lower" transform="translate(68 352)"><path d="M0 4C-6 1-6-5-2-7c1-3 6-3 8 0 4 4 2 10-3 12Z"/></g>
+    </svg>
+    <span class="player__disc" aria-hidden="true"><span></span></span>
+    <div class="player__controls player__controls--vertical">
+      <button id="previous" aria-label="Previous track" title="Previous track"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 6l-9 6 9 6z"/></svg></button>
+      <button id="play" class="player__play" aria-label="Play music" title="Play"><svg class="play-icon" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></svg><svg class="pause-icon" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+      <button id="next" aria-label="Next track" title="Next track"><svg viewBox="0 0 24 24"><path d="M18 5v14M5 6l9 6-9 6z"/></svg></button>
+    </div>
+    <label class="volume volume--vertical" for="volume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Zm12-2a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14"/></svg><input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="Volume"></label>
+    <audio id="audio" preload="none"></audio>
+  </aside>
+
+  <nav class="page-nav" aria-label="Page navigation">
+    <button class="page-nav__dot is-active" data-go="home" aria-label="Go to introduction" aria-current="location"></button>
+    <button class="page-nav__dot" data-go="links" aria-label="Go to social links"></button>
+  </nav>
+  <script src="script.js?v=20261015-14"></script>
+</body>
+</html>
