@@ -149,3 +149,11 @@ h1 span:last-child{color:#eeecea}
 @keyframes name-pedestal{0%,100%{opacity:.58;scale:.92 1}50%{opacity:.92;scale:1 1}}
 @keyframes name-leaf-sway{0%,100%{rotate:-18deg}50%{rotate:13deg}}
 @media(prefers-reduced-motion:reduce){.player__vine-stem,.player__vine-bud,.home-card h1 .nickname,.home-card h1 .nickname::before,.home-card h1 .nickname::after{animation:none!important}}
+
+/* The player frame follows a steady rounded rectangle instead of the old uneven path. */
+.music-player>.player__vine-frame{inset:-5px;width:calc(100% + 10px);height:calc(100% + 10px)}
+.player__vine-stem{stroke:rgba(159,168,143,.58);stroke-width:1.55;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.scroll-cue{gap:7px}
+.scroll-cue__hint{color:rgba(233,231,229,.24);font-size:8px;font-weight:400;letter-spacing:.14em;opacity:.78;animation:scroll-hint-breathe 3s ease-in-out infinite}
+@keyframes scroll-hint-breathe{0%,100%{opacity:.42}50%{opacity:.82}}
+@media(prefers-reduced-motion:reduce){.scroll-cue__hint{animation:none!important;opacity:.62}}

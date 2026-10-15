@@ -351,8 +351,13 @@ playButton.addEventListener('click', () => {
 });
 document.querySelector('#previous').addEventListener('click', () => setTrack(trackIndex - 1));
 document.querySelector('#next').addEventListener('click', () => setTrack(trackIndex + 1));
-document.querySelector('#volume').addEventListener('input', (event) => { audio.volume = Number(event.target.value); });
-audio.volume = .07;
+const volumeSlider = document.querySelector('#volume');
+const playerVolumeGain = .14; // Keep the displayed 50% position at the existing quiet default.
+function syncPlayerVolume() {
+  audio.volume = Number(volumeSlider.value) * playerVolumeGain;
+}
+volumeSlider.addEventListener('input', syncPlayerVolume);
+syncPlayerVolume();
 audio.addEventListener('play', () => setPlaying(true));
 audio.addEventListener('pause', () => setPlaying(false));
 audio.addEventListener('ended', () => setTrack(trackIndex + 1));
